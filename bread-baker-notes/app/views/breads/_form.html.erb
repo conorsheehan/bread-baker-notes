@@ -1,0 +1,41 @@
+<%= form_for(@bread) do |f| %>
+  <% if @bread.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bread.errors.count, "error") %> prohibited this bread from being saved:</h2>
+
+      <ul>
+      <% @bread.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br>
+    <%= f.number_field :rating %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :preferment %><br>
+    <%= f.text_field :preferment %>
+  </div>
+  <div class="field">
+    <%= f.label :room_temp %><br>
+    <%= f.number_field :room_temp %>
+  </div>
+  <div class="field">
+    <%= f.label :water_temp %><br>
+    <%= f.number_field :water_temp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

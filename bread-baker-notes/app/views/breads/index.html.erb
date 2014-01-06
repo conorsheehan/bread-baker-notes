@@ -1,0 +1,37 @@
+<h1>Listing breads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Date</th>
+      <th>Preferment</th>
+      <th>Room temp</th>
+      <th>Water temp</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @breads.each do |bread| %>
+      <tr>
+        <td><%= bread.name %></td>
+        <td><%= bread.rating %></td>
+        <td><%= bread.date %></td>
+        <td><%= bread.preferment %></td>
+        <td><%= bread.room_temp %></td>
+        <td><%= bread.water_temp %></td>
+        <td><%= link_to 'Show', bread %></td>
+        <td><%= link_to 'Edit', edit_bread_path(bread) %></td>
+        <td><%= link_to 'Destroy', bread, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bread', new_bread_path %>

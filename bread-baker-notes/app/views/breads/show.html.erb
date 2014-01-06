@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bread.name %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @bread.rating %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @bread.date %>
+</p>
+
+<p>
+  <strong>Preferment:</strong>
+  <%= @bread.preferment %>
+</p>
+
+<p>
+  <strong>Room temp:</strong>
+  <%= @bread.room_temp %>
+</p>
+
+<p>
+  <strong>Water temp:</strong>
+  <%= @bread.water_temp %>
+</p>
+
+<%= link_to 'Edit', edit_bread_path(@bread) %> |
+<%= link_to 'Back', breads_path %>
